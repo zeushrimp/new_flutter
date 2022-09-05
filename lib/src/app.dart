@@ -5,6 +5,13 @@ class App extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return WillPopScope(
+        child: Scaffold(
+          appBar: AppBar(),
+          body: Container(),
+        ),
+        onWillPop: () async {
+          return false;
+        });
   }
 }
